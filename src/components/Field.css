@@ -1,0 +1,21 @@
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field label { font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+.field__opt { font-weight: 500; color: var(--ink-soft); }
+.field input, .field textarea, .field select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid color-mix(in srgb, var(--ink) 35%, transparent);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--surface-ink, #211f29);
+  font: inherit; font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+[data-theme="about"] .field input, [data-theme="about"] .field textarea, [data-theme="about"] .field select { color: #f4f2ee; }
+.field textarea { min-height: 7.5rem; resize: vertical; }
+.field input::placeholder, .field textarea::placeholder { color: #6b6776; opacity: 1; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 45%, transparent); }
+.field--error input, .field--error textarea, .field--error select { border-color: #a5232f; }
+.field__msg { margin: 0; font-size: 0.8rem; font-weight: 600; color: #a5232f; }
+[data-theme="about"] .field__msg { color: #ffb3ba; }
+.field__hint { margin: 0; font-size: 0.78rem; color: var(--ink-soft); }

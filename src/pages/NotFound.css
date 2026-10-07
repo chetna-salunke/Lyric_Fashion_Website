@@ -1,0 +1,2 @@
+.nf { display: grid; align-content: center; justify-items: start; gap: 1rem; }
+.nf h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); max-width: 14ch; }

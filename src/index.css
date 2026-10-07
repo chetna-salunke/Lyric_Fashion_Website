@@ -1,0 +1,211 @@
+:root {
+  --font-display: "Bodoni Moda", "Georgia", serif;
+  --font-body: "Manrope", "Helvetica Neue", Arial, sans-serif;
+
+  /* Brand palette — your five colours, plus deeper tones that pass WCAG AA for text */
+  --lavender: #cecbd6;
+  --lavender-light: #e8e6ec;
+  --rose: #c48e95;
+  --rose-deep: #8f4d59;
+  --sand: #ddbf8c;
+  --sand-light: #ecdab6;
+  --sage: #a9b88d;
+  --sage-light: #c3cfad;
+  --charcoal: #3a3b3f;
+  --charcoal-deep: #2a2b2e;
+  --night: #211f29;
+
+  --radius: 18px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --rail: 0px; /* left space reserved for the social rail on desktop */
+  --nav-h: 5.5rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- per-page themes (every text/background pair has contrast >= 4.5:1) ---------- */
+[data-theme="home"] {
+  --bg-a: var(--lavender);
+  --bg-b: var(--lavender-light);
+  --ink: #211f29;
+  --ink-soft: #4a4655;
+  --accent: var(--rose);
+  --accent-text: #7d3f4b;
+  --surface: #ffffff;
+  --btn-bg: #211f29;
+  --btn-ink: #ffffff;
+  --line: rgba(33, 31, 41, 0.18);
+}
+[data-theme="shop"] {
+  --bg-a: var(--sand);
+  --bg-b: var(--sand-light);
+  --ink: #2c2013;
+  --ink-soft: #55432b;
+  --accent: #b88a3e;
+  --accent-text: #6d4a12;
+  --surface: #fffaf0;
+  --btn-bg: #2c2013;
+  --btn-ink: #fff8ea;
+  --line: rgba(44, 32, 19, 0.2);
+}
+[data-theme="collection"] {
+  --bg-a: var(--sage);
+  --bg-b: var(--sage-light);
+  --ink: #1c2713;
+  --ink-soft: #38482a;
+  --accent: #5d7347;
+  --accent-text: #2f4222;
+  --surface: #f6f9ee;
+  --btn-bg: #1c2713;
+  --btn-ink: #f3f6ea;
+  --line: rgba(28, 39, 19, 0.22);
+}
+[data-theme="about"] {
+  --bg-a: var(--charcoal);
+  --bg-b: var(--charcoal-deep);
+  --ink: #f4f2ee;
+  --ink-soft: #cfcdc8;
+  --accent: var(--sand);
+  --accent-text: var(--sand);
+  --surface: #45464b;
+  --btn-bg: var(--sand);
+  --btn-ink: #211a0d;
+  --line: rgba(244, 242, 238, 0.22);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+html, body, #root { margin: 0; padding: 0; min-height: 100%; }
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  background: var(--night);
+  color: #211f29;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+img { max-width: 100%; display: block; }
+h1, h2, h3, h4, p { overflow-wrap: anywhere; }
+
+:focus-visible {
+  outline: 3px solid var(--accent-text, #7d3f4b);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.app {
+  background: linear-gradient(135deg, var(--bg-a), var(--bg-b));
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: clip; /* animated elements that start off to the side never cause sideways scroll */
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+.page {
+  position: relative;
+  min-height: 100svh;
+  min-height: 100vh;
+  padding: calc(var(--nav-h) + 2rem) var(--gutter) 4rem calc(var(--gutter) + var(--rail));
+  overflow-x: clip;
+}
+.page--flush { padding-left: var(--rail); padding-right: 0; padding-bottom: 0; }
+
+.container { width: 100%; max-width: 74rem; margin: 0 auto; }
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.display {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.lede { color: var(--ink-soft); line-height: 1.7; font-size: 1rem; max-width: 38rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.95rem 2rem;
+  border: 2px solid var(--btn-bg);
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.5); }
+.btn:active { transform: translateY(0); }
+.btn[disabled] { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: var(--bg-b); }
+.btn--sm { padding: 0.6rem 1.2rem; font-size: 0.8rem; }
+.btn--block { width: 100%; }
+
+.chip {
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.chip:hover { transform: translateY(-1px); background: color-mix(in srgb, var(--ink) 12%, transparent); }
+.chip[aria-pressed="true"], .chip--active { background: var(--ink); color: var(--bg-b); }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: fixed; left: 1rem; top: -4rem; z-index: 200;
+  background: #fff; color: #111; padding: 0.7rem 1rem; border-radius: 10px; font-weight: 700;
+}
+.skip-link:focus { top: 1rem; }
+
+/* placeholder shown only if a photo fails to load */
+.img-fallback {
+  width: 100%; height: 100%;
+  display: grid; place-items: center; text-align: center;
+  padding: 1rem;
+  background: linear-gradient(145deg, var(--lavender), var(--sand-light));
+  color: #2c2013;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 1100px) {
+  :root { --rail: 3.25rem; }
+}
+@media (max-width: 960px) {
+  :root { --nav-h: 4.75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+/* keep heads in view when a photo has to be cropped */
+.safe-img { object-position: center 15%; }

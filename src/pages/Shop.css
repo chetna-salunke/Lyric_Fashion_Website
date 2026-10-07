@@ -1,0 +1,24 @@
+.shop__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 2.5rem; }
+.shop__title { font-size: clamp(2.6rem, 6vw, 4.8rem); }
+.shop__title em { font-style: italic; color: var(--accent-text); }
+.shop__arrows { display: flex; gap: 0.6rem; }
+.shop__arrows button { width: 3rem; height: 3rem; border-radius: 50%; border: 1.5px solid var(--ink); background: none; color: var(--ink); display: grid; place-items: center; transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+.shop__arrows button:hover { background: var(--ink); color: var(--bg-b); transform: scale(1.06); }
+
+.strip { display: flex; gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.5rem 0.25rem 1.8rem; scrollbar-width: thin; scrollbar-color: var(--ink) transparent; }
+.strip__item { flex: 0 0 min(17rem, 72vw); scroll-snap-align: start; }
+.arch { display: block; }
+.arch__img { display: block; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 999px 999px var(--radius) var(--radius); background: var(--sand-light); box-shadow: 0 26px 40px -26px rgba(44, 32, 19, 0.7); }
+.arch__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s var(--ease); }
+.arch:hover .arch__img img { transform: scale(1.07); }
+.arch__txt { display: grid; gap: 0.25rem; padding: 1rem 0.5rem 0; text-align: center; }
+.arch__txt strong { font-family: var(--font-display); font-size: 1.35rem; }
+.arch__txt small { font-size: 0.8rem; color: var(--ink-soft); font-weight: 600; }
+.arch__txt em { display: inline-flex; justify-content: center; align-items: center; gap: 0.4rem; font-style: normal; font-size: 0.8rem; font-weight: 800; margin-top: 0.3rem; color: var(--accent-text); transition: gap 0.2s ease; }
+.arch:hover .arch__txt em { gap: 0.8rem; }
+
+.shop__sec { margin-top: 3.5rem; }
+.shop__sec h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem 1.3rem; }
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .shop__arrows { display: none; } .grid { gap: 1rem 0.8rem; } }

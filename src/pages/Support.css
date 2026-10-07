@@ -1,0 +1,27 @@
+.sup__head { margin-bottom: 2.5rem; }
+.sup__head .display { font-size: clamp(2.6rem, 6vw, 4.8rem); }
+.sup__head em { font-style: italic; color: var(--accent-text); }
+.sup__grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.6rem; align-items: start; }
+.sup__form-card { padding: clamp(1.4rem, 3vw, 2.4rem); border-radius: 24px; background: color-mix(in srgb, var(--surface) 82%, transparent); border: 1px solid var(--line); box-shadow: 0 30px 50px -36px rgba(0, 0, 0, 0.5); }
+.sup__form-card form { display: grid; gap: 1.1rem; }
+.sup__form-card h2 { margin: 0 0 0.3rem; font-family: var(--font-display); font-size: 1.7rem; }
+.sup__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.sup__form-card .btn { justify-self: start; }
+.sup__sent { text-align: center; display: grid; justify-items: center; gap: 0.9rem; padding: 2rem 0; }
+.sup__sent p { margin: 0; color: var(--ink-soft); line-height: 1.6; max-width: 26rem; }
+.sup__tick { width: 3.6rem; height: 3.6rem; border-radius: 50%; background: var(--btn-bg); color: var(--btn-ink); display: grid; place-items: center; }
+.sup__side { display: grid; gap: 1rem; }
+.sup__card { padding: 1.3rem 1.5rem; border-radius: var(--radius); border: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 60%, transparent); }
+.sup__card h3 { margin: 0 0 0.4rem; font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-text); }
+.sup__card a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.sup__card p { margin: 0.2rem 0 0; font-size: 0.88rem; color: var(--ink-soft); }
+.faq { margin-top: 5rem; scroll-margin-top: 6rem; }
+.faq .display { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: 1.4rem; }
+.faq__item { border-top: 1px solid var(--line); }
+.faq__item:last-child { border-bottom: 1px solid var(--line); }
+.faq__item h3 { margin: 0; }
+.faq__item button { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem 0; border: none; background: none; color: var(--ink); font-weight: 700; font-size: 1.02rem; text-align: left; }
+.faq__a { overflow: hidden; }
+.faq__a p { margin: 0 0 1.2rem; line-height: 1.7; color: var(--ink-soft); max-width: 44rem; }
+@media (max-width: 900px) { .sup__grid { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .sup__row { grid-template-columns: 1fr; } }

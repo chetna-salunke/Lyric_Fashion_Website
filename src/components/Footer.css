@@ -1,0 +1,23 @@
+.footer { background: #211f29; color: #e9e6ee; padding: 4rem var(--gutter) 1.5rem calc(var(--gutter) + var(--rail)); }
+.footer__inner { max-width: 74rem; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; }
+.footer__eyebrow { margin: 0 0 0.6rem; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #ddbf8c; }
+.footer__news h2 { margin: 0; font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 600; color: #fff; }
+.footer__sub { color: #b9b5c4; line-height: 1.6; font-size: 0.92rem; max-width: 26rem; }
+.footer__form { display: flex; gap: 0.5rem; max-width: 26rem; }
+.footer__form input { flex: 1; min-width: 0; padding: 0.85rem 1.1rem; border-radius: 999px; border: 1.5px solid #6b6776; background: #2c2a35; color: #fff; font: inherit; font-size: 0.9rem; }
+.footer__form input::placeholder { color: #a9a4b6; opacity: 1; }
+.footer__form input:focus { outline: none; border-color: #ddbf8c; box-shadow: 0 0 0 4px rgba(221, 191, 140, 0.25); }
+.footer__form button { border: none; background: #ddbf8c; color: #211a0d; font-weight: 800; font-size: 0.85rem; padding: 0 1.4rem; border-radius: 999px; transition: transform 0.2s ease, background 0.2s ease; }
+.footer__form button:hover { background: #ecd3a4; transform: translateY(-2px); }
+.footer__err { margin: 0.5rem 0 0 0.5rem; color: #ffb3ba; font-size: 0.82rem; font-weight: 600; }
+.footer__ok { color: #c3cfad; font-weight: 700; }
+.footer__col { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-start; }
+.footer__col h3 { margin: 0 0 0.4rem; font-size: 0.74rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #ddbf8c; }
+.footer__col a { color: #e9e6ee; font-size: 0.92rem; transition: color 0.2s ease, transform 0.2s ease; }
+.footer__col a:hover { color: #ddbf8c; transform: translateX(3px); }
+.footer__social { display: flex; gap: 0.5rem; }
+.footer__social a { width: 2.5rem; height: 2.5rem; border: 1.5px solid #6b6776; border-radius: 50%; display: grid; place-items: center; }
+.footer__social a:hover { background: #ddbf8c; color: #211a0d; border-color: #ddbf8c; transform: translateY(-3px); }
+.footer__legal { max-width: 74rem; margin: 3rem auto 0; padding-top: 1.25rem; border-top: 1px solid #3f3d49; color: #a9a4b6; font-size: 0.8rem; }
+@media (max-width: 860px) { .footer__inner { grid-template-columns: 1fr 1fr; } .footer__news { grid-column: 1 / -1; } }
+@media (max-width: 480px) { .footer__form { flex-direction: column; } .footer__form button { padding: 0.85rem; } }
