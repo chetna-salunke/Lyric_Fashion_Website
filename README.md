@@ -41,46 +41,6 @@ src/
 └── main.jsx
 ```
 
-## How to Run the Project
-
-Clone the repository:
-
-```bash
-git clone <your-github-repository-url>
-```
-
-Go to the project folder:
-
-```bash
-cd lyric-fashion-website
-```
-
-Install the required packages:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The project will then be available on the local development server shown in the terminal.
-
-## What I Learned
-
-While building this project, I got more practical experience with:
-
-- Building a React project from scratch
-- Creating reusable components
-- Converting a Figma design into a working website
-- Creating responsive layouts
-- Organizing frontend code
-- Handling different screen sizes
-- Improving the overall UI and user experience
-
 ## Future Improvements
 
 Some things I would like to add in the future:
@@ -93,8 +53,3 @@ Some things I would like to add in the future:
 - Payment integration
 - Wishlist functionality
 
-## Author
-
-**Chetna Salunke**
-
-Frontend Developer | React.js Developer
