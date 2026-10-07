@@ -1,5 +1,7 @@
 # Lyric Fashion
 
+<img width="2040" height="2329" alt="lyric-website-preview" src="https://github.com/user-attachments/assets/84a83614-809a-4151-887a-13ce69028b88" />
+
 React + Vite fashion store. Animated home page, shop, product pages, categories/collections, about, support, bag + wishlist, checkout and validated forms.
 
 ## Why I Built This
