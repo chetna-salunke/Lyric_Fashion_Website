@@ -27,7 +27,7 @@ The goal was to keep the design simple, modern, and easy to use while making sur
 - Figma
 
 ## Project Structure
-
+    
 The project is divided into reusable React components to make the code easier to manage and update.
 
 ```text
