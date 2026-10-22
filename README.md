@@ -4,7 +4,7 @@
 
 React + Vite fashion store. Animated home page, shop, product pages, categories/collections, about, support, bag + wishlist, checkout and validated forms.
 
-## Why I Built This
+## Why I Built This   
 
 I wanted to build a fashion website where I could work on both the design and development side of the project.
 
